@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background: black;
+}
+
+nav a {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .2s;
+}
+
+nav a:hover {
+    color: aqua;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1f242d;
+}
+
+section:nth-child(odd) {
+    background: #323946;
+}
+
+#home {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: url('images/main3.png') center center/cover no-repeat;
+}
+
+.container .home-content {
+    width: 30%;
+    float: left;
+}
+
+.home-content .heading {
+    font-size: 50px;
+    letter-spacing: 1px;
+    padding-top: 25px;
+    color: gold;
+    white-space: nowrap;
+}
+
+.home-content .agency-name {
+    color: white;
+    font-size: 3.5em;
+    letter-spacing: 3px;
+    white-space: nowrap;
+    padding-top: 30px;
+}
+
+.home-content .description {
+    font-size: 20px;
+    font-family: serif;
+    margin-top: 1px;
+    line-height: 1.5;
+    color: aliceblue;
+    padding-top: 50px;
+    white-space: nowrap;
+}
+
+.container .home-image {
+    width: 30%;
+    float: right;
+}
+
+.container .home-image img {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+}
+
+#about {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 80%;
+    padding: 30px 100px;
+}
+
+.container .about-image {
+    width: 30%;
+    float: left;
+}
+
+.container .about-image img {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+}
+
+.container .about-content {
+    width: 60%;
+    float: left;
+    margin-left: 100px;
+}
+
+.about-content h1 {
+    font-size: 90px;
+    letter-spacing: 3px;
+    margin-top: 25px;
+    color: gold;
+}
+
+.container .about-content p {
+    font-size: 20px;
+    font-family: serif;
+    margin-top: 3em;
+    line-height: 1.5;
+    color: white;
+}
+
+#destination {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.wrap {
+    width: 80%;
+    padding: 10px;
+}
+
+.wrap .title {
+    text-align: center;
+    font-size: 40px;
+    color: gold;
+}
+
+.wrap h1::after {
+    content: "";
+    height: 4px;
+    width: 230px;
+    color: gold;
+    display: block;
+    margin: auto;
+}
+
+.destinations {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    margin-top: 20px;
+    text-align: center;
+    padding-right: 70px;
+}
+
+.card {
+    width: 100%;
+    margin: 0px 20px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10%;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card .destination-image {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+.card h2 {
+    font-size: 28px;
+    color: wheat;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 17px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #1f242d;
+}
+
+#book {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.wrap form {
+    width: 400px;
+    height: 450px;
+    margin-right: 25rem;
+    margin-top: 5rem;
+    padding-top: 20px;
+    text-align: center;
+    float: right;
+    border: 5px groove rgb(162, 155, 155);
+}
+
+.buttons,
+input[type="submit"],
+input[type="reset"] {
+    background: white;
+    color: black;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 3rem;
+    width: 100px;
+}
+
+.email-input {
+    border: none;
+    border-bottom: 3px solid rgb(80, 76, 76);
+    background: #323946;
+    outline: none;
+    width: 20rem;
+    margin-top: 3rem;
+    padding-bottom: 20px;
+    font-size: 16px;
+    border-color: white;
+    transition: border-bottom 0.3s ease;
+}
+
+.email-input:focus {
+    color: white;
+}
+
+input:focus::placeholder {
+    transform: translateY(-10px);
+    font-size: 12px;
+    color: #323946;
+    z-index: -1;
+}
+
+::placeholder {
+    transition: 0.3s;
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+.footer {
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer h1 {
+    text-align: center;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    display: list-item;
+    padding-top: 1rem;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-company-name {
+    color: white;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer-icons a {
+    color: white;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: aqua;
+}
+
+/* Media Query for responsiveness */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 30px 50px;
+    }
+
+    .home-content, .home-image, .about-image, .about-content {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .about-content {
+        margin-left: 0;
+    }
+
+    .about-content h1 {
+        font-size: 60px;
+        letter-spacing: 2px;
+        margin-top: 30px;
+    }
+
+    .about-content p {
+        font-size: 18px;
+    }
+
+    .wrap {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .wrap form {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        padding: 20px;
+        float: none;
+    }
+
+    .destinations {
+        grid-template-columns: 1fr 1fr;
+        padding-right: 0;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-links {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav a {
+        font-size: 0.8rem;
+        margin-left: 10px;
+    }
+
+    .home-content .heading {
+        font-size: 40px;
+    }
+
+    .home-content .agency-name {
+        font-size: 2.5em;
+    }
+
+    .home-content .description {
+        font-size: 16px;
+    }
+
+    .wrap .title {
+        font-size: 30px;
+    }
+
+    .card {
+        margin: 0 10px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+
+    .destinations {
+        grid-template-columns: 1fr;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px 2%;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+        margin-left: 5px;
+    }
+
+    .home-content .heading {
+        font-size: 30px;
+    }
+
+    .home-content .agency-name {
+        font-size: 2em;
+    }
+
+    .home-content .description {
+        font-size: 14px;
+    }
+
+    .wrap .title {
+        font-size: 24px;
+    }
+
+    .card {
+        margin: 0 5px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+
+    .wrap form {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 1rem;
+        padding: 20px;
+        float: none;
+    }
+
+    .buttons,
+    input[type="submit"],
+    input[type="reset"] {
+        font-size: 12px;
+        padding: 8px 12px;
+        width: 80px;
+    }
+
+    .email-input {
+        width: 100%;
+    }
+
+    .footer h3 {
+        font-size: 20px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .about-image, .about-content {
+        width: 100%;
+        float: none;
+    }
+
+    .about-content {
+        margin-left: 0;
+    }
+
+    .about-content h1 {
+        font-size: 60px;
+        letter-spacing: 2px;
+        margin-top: 30px;
+    }
+
+    .about-content p {
+        font-size: 18px;
+    }
+
+    .footer-links a {
+        font-size: 10px;
+    }
+
+    .footer-icons a {
+        font-size: 16px;
+    }
+}
